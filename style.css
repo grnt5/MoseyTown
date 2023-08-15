@@ -17,7 +17,8 @@ body {
 
 .header h2 {
     font-size: 30px;
-    margin: 10px;
+    padding: 10px;
+    margin: 0
 }
 
 .menu-list {
@@ -25,11 +26,45 @@ body {
     display: flex;
     margin: 0px;
     vertical-align: middle;
+    position: relative;
 }
 
 .menu-list li {
-    padding: 0px 50px;
+    padding: 15px 50px 15px 0;
+    font-size: 25px;
+    height: 100%;
+}
+
+.menu-list li:hover {
+    color:antiquewhite;
+    cursor: default;
+}
+
+.sub-menu-list {
+    position: absolute;
+    display: none;
+    background-color: #19a198;
+    top: 100%;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+.sub-menu-list a {
+    text-decoration: none;
     font-size: 20px;
+    color: azure;
+    margin: 50px 5px;
+    white-space: nowrap;
+}
+
+.menu-list li:hover .sub-menu-list{
+    display: block;
+    cursor:default;
+}
+
+.sub-menu-list a:hover {
+    text-decoration: underline
 }
 
 .welcome {
