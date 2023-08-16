@@ -88,16 +88,23 @@ body {
     font-size: 32px;
 }
 
-.sneak-peak h2 {
+.sneak-peek h2 {
     padding-left: 25px;
     font-size: 36px;
 }
 
-.sneak-peak-grid {
+.sneak-peek-grid {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     margin: 50px;
     gap: 5px;
+}
+
+.sneak-peek-item {
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+    transition:all 0.5s;
 }
 
 .beach {
@@ -106,8 +113,6 @@ body {
     background-image: url("./images/beach.jpg");
     height: 80vh;
     width: 60vw;
-    background-size: cover;
-    position: relative;
 }
 
 .nature {
@@ -115,8 +120,6 @@ body {
     grid-row: 1 / span 1;
     background-image: url("./images/nature.jpg");
     height: 40vh - 5px;
-    background-size: cover;
-    position: relative;
 }
 
 .food {
@@ -124,8 +127,6 @@ body {
     grid-row: 2 / span 1;
     background-image: url("./images/food.jpg");
     height: 40vh - 5px;
-    background-size: cover;
-    position: relative;
 }
 
 .boardwalk {
@@ -133,8 +134,6 @@ body {
     grid-row: 3 / span 1;
     background-image: url("./images/bord.png");
     width: 100%;
-    background-size: cover;
-    position: relative;
 }
 
 .text-container {
@@ -148,6 +147,13 @@ body {
 
 .text-container p {
     padding-left: 10px;
+}
+
+.sneak-peek-item:hover {
+    background-size: 105% 105%;
+    filter: brightness(1.05);
+    overflow: hidden;
+    cursor:default
 }
 
 .activities h2 {
